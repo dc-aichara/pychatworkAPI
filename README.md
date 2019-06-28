@@ -1,9 +1,9 @@
 # Chatwork API V2 Wrapper
-pyChatwork is a python package to access chatwork offline.  It is based on [Chatwork API V2](http://download.chatwork.com/ChatWork_API_Documentation.pdf). 
+pychatworkAPI is a python package to access chatwork offline.  It is based on [Chatwork API V2](http://download.chatwork.com/ChatWork_API_Documentation.pdf). 
 ## Installation 
 ### PyPI
 ```
-pip install pyChatwork
+pip install pychatworkAPI
 ```
 ### From Source (Github)
 
@@ -15,7 +15,7 @@ python3 setup.py install
 
 ## Usages
 ```python
-from pyChatwork import Chatwork
+from pychatworkAPI import Chatwork
 
 api = Chatwork('Your Chatwork API Token')
 ```
