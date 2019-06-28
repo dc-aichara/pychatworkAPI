@@ -142,7 +142,7 @@ api = Chatwork('Your Chatwork API Token')
 
 
 ***
-### License 
+## License 
 [MIT](https://choosealicense.com/licenses/mit/) © [Dayal Chand Aichara](https://github.com/dc-aichara)
 
 ***
