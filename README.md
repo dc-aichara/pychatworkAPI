@@ -2,8 +2,9 @@
 ***
 pychatworkAPI is a python package to access chatwork offline.  It is based on [Chatwork API V2](http://download.chatwork.com/ChatWork_API_Documentation.pdf). 
 
-## Installation 
 ***
+## Installation 
+
 ### PyPI
 ```
 pip install pychatworkAPI
@@ -15,9 +16,9 @@ git clone https://github.com/dc-aichara/pyChatwork.git
 cd pyChatwork
 
 python3 setup.py install
-
-## Usages
 ***
+## Usages
+
 ```python
 from pychatworkAPI import Chatwork
 
@@ -113,7 +114,7 @@ api = Chatwork('Your Chatwork API Token')
 <Response [204]>
 
 ```
-### Handling requests
+### Handling incoming requests
 ```python
 
 >>> api.get_incoming_requests() # get incoming requests to join chat rooms
@@ -126,8 +127,9 @@ api = Chatwork('Your Chatwork API Token')
 
 
 ```
-## *Responses*
 ***
+## *Responses*
+
 > <Response [200]> Successful
 
 > <Response [204]> No content 
@@ -139,8 +141,10 @@ api = Chatwork('Your Chatwork API Token')
 > <<Response [429] > Too many requests (Request limit is 300/5 minutes)
 
 
-
+***
 ### License 
 [MIT](https://choosealicense.com/licenses/mit/) © [Dayal Chand Aichara](https://github.com/dc-aichara)
 
-Read [Chatwork API V2](http://download.chatwork.com/ChatWork_API_Documentation.pdf) documentation to learn more. 
+***
+
+Note: Read [Chatwork API V2](http://download.chatwork.com/ChatWork_API_Documentation.pdf) documentation to learn more. 
