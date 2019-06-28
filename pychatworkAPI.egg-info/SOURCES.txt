@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+pychatworkAPI/__init__.py
+pychatworkAPI/api.py
+pychatworkAPI.egg-info/PKG-INFO
+pychatworkAPI.egg-info/SOURCES.txt
+pychatworkAPI.egg-info/dependency_links.txt
+pychatworkAPI.egg-info/requires.txt
+pychatworkAPI.egg-info/top_level.txt

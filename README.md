@@ -1,6 +1,9 @@
 # Chatwork API V2 Wrapper
+***
 pychatworkAPI is a python package to access chatwork offline.  It is based on [Chatwork API V2](http://download.chatwork.com/ChatWork_API_Documentation.pdf). 
+
 ## Installation 
+***
 ### PyPI
 ```
 pip install pychatworkAPI
@@ -14,11 +17,13 @@ cd pyChatwork
 python3 setup.py install
 
 ## Usages
+***
 ```python
 from pychatworkAPI import Chatwork
 
 api = Chatwork('Your Chatwork API Token')
 ```
+### basic usages
 ```python
 
 >>> api.get_me() # get your account information
@@ -50,6 +55,10 @@ api = Chatwork('Your Chatwork API Token')
 >>> api.send_file(1987672538,'a.jpg', 'a.jpg', 'test')  # send a file with message to a chat
 <Response [200]>
 
+````
+
+### Chat Rooms
+```python
 
 >>> api.get_rooms_by_id(self, room_id) # get room details by room id
 
@@ -99,6 +108,13 @@ api = Chatwork('Your Chatwork API Token')
 >>> api.create_new_room('Test', [12, 187, 78],'group',[12, 78],[187] , 'test1') # create a new chat room
 <Response [200]>
 
+# api.delete_rooms_by_id(self, room_id, action)
+>>> api.delete_rooms_by_id(1xxxx96, 'leave') # leave or delete a chat room
+<Response [204]>
+
+```
+### Handling requests
+```python
 
 >>> api.get_incoming_requests() # get incoming requests to join chat rooms
 
@@ -109,12 +125,9 @@ api = Chatwork('Your Chatwork API Token')
 >>> api.delete_incoming_requests(self, request_id) # delete incoming request by request it
 
 
-# api.delete_rooms_by_id(self, room_id, action)
->>> api.delete_rooms_by_id(1xxxx96, 'leave') # leave or delete a chat room
-<Response [204]>
-
 ```
 ## *Responses*
+***
 > <Response [200]> Successful
 
 > <Response [204]> No content 
