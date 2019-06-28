@@ -2,6 +2,7 @@ import requests
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 
+
 class Chatwork(object):
 
     __API_URL_BASE = 'https://api.chatwork.com/v2'
@@ -20,7 +21,6 @@ class Chatwork(object):
         self.session = requests.Session()
         retries = Retry(total=5, backoff_factor=0.5, status_forcelist=[502, 503, 504])
         self.session.mount('http://', HTTPAdapter(max_retries=retries))
-
 
     def get_me(self):
         """
