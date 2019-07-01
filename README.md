@@ -36,7 +36,7 @@ api = Chatwork('Your Chatwork API Token')
 {'unread_room_num': 0, 'mention_room_num': 0, 'mytask_room_num': 0, 'unread_num': 0, 'mention_num': 0, 'mytask_num': 0}
 
 
->>> api.get_my_tasks() # get list of taskd assigned to you
+>>> api.get_my_tasks() # get list of tasks assigned to you
 [{'task_id': 139296044, 'room': {'room_id': 1xxxxx7, 'name': 'Group Name', 'icon_path': 'https://appdata.chatwork.com/icon/ico_xxx.png'},
  'assigned_by_account': {'account_id': xxxxx, 'name': 'Dayal Chand Aichara', 'avatar_image_url': 'https://appdata.chatwork.com/avatar/xxxx/xxxx.rsz.jpg'}, 'message_id': '119629631860408724', 'body': 'Update Server', 'limit_time': 1685996399, 'status': 'open', 'limit_type': 'date'}]
 
