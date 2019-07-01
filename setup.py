@@ -4,16 +4,16 @@ this_directory = path.abspath(path.dirname(__file__))
 with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 setuptools.setup(
-  name = 'pychatworkAPI',
-  packages = ['pychatworkAPI'],
-  version = '1.1',
+  name='pychatworkAPI',
+  packages=['pychatworkAPI'],
+  version='1.11',
   license='MIT',
   description = 'pychatworkAPI is a python package to access chatwork offline.',
-  author = 'Dayal Chand Aichara',
-  author_email = 'dc.aichara@gmail.com',
-  url = 'https://github.com/dc-aichara/pyChatwork',
-  download_url = 'https://github.com/dc-aichara/pychatworkAPI/archive/V-1.1.tar.gz',
-  keywords = ['chatwork', 'chatwork-api'],
+  author='Dayal Chand Aichara',
+  author_email='dc.aichara@gmail.com',
+  url='https://github.com/dc-aichara/pyChatwork',
+  download_url='https://github.com/dc-aichara/pychatworkAPI/archive/1.11.tar.gz',
+  keywords=['chatwork', 'chatwork-api'],
   install_requires=['requests',],
   classifiers=[
     'Development Status :: 5 - Production/Stable',

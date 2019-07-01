@@ -1,33 +1,39 @@
 Metadata-Version: 2.1
 Name: pychatworkAPI
-Version: 1.1
+Version: 1.11
 Summary: pychatworkAPI is a python package to access chatwork offline.
 Home-page: https://github.com/dc-aichara/pyChatwork
 Author: Dayal Chand Aichara
 Author-email: dc.aichara@gmail.com
 License: MIT
-Download-URL: https://github.com/dc-aichara/pychatworkAPI/archive/V-1.1.tar.gz
+Download-URL: https://github.com/dc-aichara/pychatworkAPI/archive/1.11.tar.gz
 Description: # Chatwork API V2 Wrapper
+        ***
         pychatworkAPI is a python package to access chatwork offline.  It is based on [Chatwork API V2](http://download.chatwork.com/ChatWork_API_Documentation.pdf). 
+        
+        ***
         ## Installation 
+        
         ### PyPI
         ```
         pip install pychatworkAPI
         ```
         ### From Source (Github)
         
-        git clone https://github.com/dc-aichara/pyChatwork.git
+        git clone https://github.com/dc-aichara/pychatworkAPI.git
         
-        cd pyChatwork
+        cd pychatworkAPI
         
         python3 setup.py install
-        
+        ***
         ## Usages
+        
         ```python
         from pychatworkAPI import Chatwork
         
         api = Chatwork('Your Chatwork API Token')
         ```
+        ### basic usages
         ```python
         
         >>> api.get_me() # get your account information
@@ -59,6 +65,10 @@ Description: # Chatwork API V2 Wrapper
         >>> api.send_file(1987672538,'a.jpg', 'a.jpg', 'test')  # send a file with message to a chat
         <Response [200]>
         
+        ````
+        
+        ### Chat Rooms
+        ```python
         
         >>> api.get_rooms_by_id(self, room_id) # get room details by room id
         
@@ -108,6 +118,13 @@ Description: # Chatwork API V2 Wrapper
         >>> api.create_new_room('Test', [12, 187, 78],'group',[12, 78],[187] , 'test1') # create a new chat room
         <Response [200]>
         
+        # api.delete_rooms_by_id(self, room_id, action)
+        >>> api.delete_rooms_by_id(1xxxx96, 'leave') # leave or delete a chat room
+        <Response [204]>
+        
+        ```
+        ### Handling incoming requests
+        ```python
         
         >>> api.get_incoming_requests() # get incoming requests to join chat rooms
         
@@ -118,12 +135,10 @@ Description: # Chatwork API V2 Wrapper
         >>> api.delete_incoming_requests(self, request_id) # delete incoming request by request it
         
         
-        # api.delete_rooms_by_id(self, room_id, action)
-        >>> api.delete_rooms_by_id(1xxxx96, 'leave') # leave or delete a chat room
-        <Response [204]>
-        
         ```
+        ***
         ## *Responses*
+        
         > <Response [200]> Successful
         
         > <Response [204]> No content 
@@ -132,14 +147,16 @@ Description: # Chatwork API V2 Wrapper
         
         > <Response [403]> Unsuccessful (Check your inputs)
         
-        > <<Response [429] > Too many requests (Request limit is 300/5 minutes)
+        > <Response [429] > Too many requests (Request limit is 300/5 minutes)
         
         
-        
-        ### License 
+        ***
+        ## License 
         [MIT](https://choosealicense.com/licenses/mit/) © [Dayal Chand Aichara](https://github.com/dc-aichara)
         
-        Read [Chatwork API V2](http://download.chatwork.com/ChatWork_API_Documentation.pdf) documentation to learn more. 
+        ***
+        
+        Note: Read [Chatwork API V2](http://download.chatwork.com/ChatWork_API_Documentation.pdf) documentation to learn more. 
 Keywords: chatwork,chatwork-api
 Platform: UNKNOWN
 Classifier: Development Status :: 5 - Production/Stable
