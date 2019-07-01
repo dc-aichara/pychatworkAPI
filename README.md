@@ -11,9 +11,9 @@ pip install pychatworkAPI
 ```
 ### From Source (Github)
 
-git clone https://github.com/dc-aichara/pyChatwork.git
+git clone https://github.com/dc-aichara/pychatworkAPI.git
 
-cd pyChatwork
+cd pychatworkAPI
 
 python3 setup.py install
 ***
@@ -138,7 +138,7 @@ api = Chatwork('Your Chatwork API Token')
 
 > <Response [403]> Unsuccessful (Check your inputs)
 
-> <<Response [429] > Too many requests (Request limit is 300/5 minutes)
+> <Response [429] > Too many requests (Request limit is 300/5 minutes)
 
 
 ***
