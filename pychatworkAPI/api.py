@@ -102,7 +102,7 @@ class Chatwork(object):
         Send a file with message  to a chat.
         :param room_id: Target chat's room id (int)
         :param file_path: file path (str)
-        :param file_name: Your file name (str)
+        :param file_name: file name to be given (str)
         :param message: Your message  (str)
         :return: response 200 if it was successful
         """
@@ -143,7 +143,7 @@ class Chatwork(object):
         except Exception as ex:
             print('Get rooms by id error - {}'.format(ex))
 
-    def get_rooms_memebers(self, room_id):
+    def get_rooms_members(self, room_id):
         """
         Change associated members of group chat at once.
         :param room_id: Target chat's room id (int)
@@ -171,7 +171,7 @@ class Chatwork(object):
 
     def get_rooms_message_information(self, room_id, message_id):
         """
-        Get information about the specified message.
+        Get information of a specified message.
         :param room_id: Target chat's room id  (int)
         :param message_id: message id of message which information is needed (int)
         :return: returns information of specific message (json)
@@ -192,17 +192,30 @@ class Chatwork(object):
         :param account_ids: list of account ids (integer)
         :return: list of task ids (json)
         """
-        data = {'body': task_name,
+        params = {'body': task_name,
                 'limit': time_limit,
                 'to_ids': account_ids
                 }
 
         try:
             get_url = '{}/rooms/{}/tasks'.format(self.endpoint, room_id)
-            response = requests.post(get_url, data=data, headers=self.headers)
+            response = requests.post(get_url, data=params, headers=self.headers)
             return response.json()
         except Exception as ex:
             print('Add rooms task error - {}'.format(ex))
+
+    def get_rooms_tasks(self, room_id):
+        """
+        Get the list of task of a chat
+        :param room_id: Target chat's room id (int)
+        :return: list of the tasks
+        """
+        try:
+            get_url = '{}/rooms/{}/tasks'.format(self.endpoint, room_id)
+            response = requests.get(get_url, headers=self.headers)
+            return response.json()
+        except Exception as ex:
+            print('Get rooms task error -{}'.format(ex))
 
     def get_rooms_task_information(self, room_id, task_id):
         """
@@ -259,7 +272,7 @@ class Chatwork(object):
         :return: response code
         """
 
-        data = {'description': description,
+        params = {'description': description,
                 'members_member_ids': members_member_ids,
                 'icon_preset': icon_preset,
                 'members_readonly_ids': members_readonly_ids,
@@ -268,11 +281,53 @@ class Chatwork(object):
                 }
 
         try:
-            get_url = '{}/rooms'.format(self.endpoint)
-            response = requests.post(get_url, data=data, headers=self.headers)
+            post_url = '{}/rooms'.format(self.endpoint)
+            response = requests.post(post_url, data=params, headers=self.headers)
             return response
         except Exception as ex:
             print('Create chat group error -{}'.format(ex))
+
+    def change_room_info(self, room_id, description, name, icon_preset):
+        """
+        Change the title and icon type of the specified chat
+        :param room_id: Target chat's room id (int)
+        :param description:  chat description to be updated (str)
+        :param name: Name of chat room (str)
+        :param icon_preset: group icon (str)
+                                    [group, check, document, meeting, event, project, business, study,
+                                     security, star, idea, heart, magcup, beer, music, sports, travel]
+        :return: response code
+        """
+        params = {'description': description,
+                  'name': name,
+                  'icon_preset': icon_preset
+                  }
+        try:
+            put_url = '{}/rooms/{}'.format(self.endpoint, room_id)
+            response = requests.put(put_url, data=params, headers=self.headers)
+            return response
+        except Exception as ex:
+            print('Change room info error -{}'.format(ex))
+
+    def change_rooms_members(self, room_id, members_admin_ids, members_member_ids, members_readonly_ids):
+        """
+        Change associated members of group chat at once
+        :param room_id: Target chat's ID
+        :param members_admin_ids: list of ids (int) [Required]
+        :param members_member_ids: list of ids(int)
+        :param members_readonly_ids: list of ids (int)
+        :return: response code
+        """
+
+        params = {'members_admin_ids': members_admin_ids,
+                  'members_member_ids': members_member_ids,
+                  'members_readonly_ids': members_readonly_ids}
+        try:
+            put_url = '{}/rooms/{}/members'.format(self.endpoint, room_id)
+            response = requests.put(put_url, data=params, headers=self.headers)
+            return response
+        except Exception as ex:
+            print('Change rooms member error -{}'.format(ex))
 
     def get_incoming_requests(self):
         """
@@ -310,4 +365,4 @@ class Chatwork(object):
             response = requests.delete(get_url, headers=self.headers)
             return response
         except Exception as ex:
-            print('Delete  incoming requests error - {}'.format(ex))
+            print('Delete incoming requests error - {}'.format(ex))
