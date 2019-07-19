@@ -175,4 +175,7 @@ chatwork = Chatwork('Your Chatwork API Token')
 
 ***
 
-Note: Read [Chatwork API V2](http://download.chatwork.com/ChatWork_API_Documentation.pdf) documentation to learn more. 
+###  Note: 
+
+1. Read [Chatwork API V2](http://download.chatwork.com/ChatWork_API_Documentation.pdf) documentation to learn more. <br>
+2. Ask your queries in [pychatworkAPI Chatwork](https://www.chatwork.com/g/05qdcee7td8lkt) group. 
