@@ -16,7 +16,9 @@ git clone https://github.com/dc-aichara/pychatworkAPI.git
 cd pychatworkAPI
 
 python3 setup.py install
+
 ***
+
 ## Usages
 
 ```python
@@ -91,9 +93,11 @@ chatwork = Chatwork('Your Chatwork API Token')
 >>> chatwork.delete_rooms_by_id(1xxxx96, 'leave') # leave or delete a chat room
 <Response [204]>
 
-
 ```
+
 - Rooms Messages
+
+
 ```python
 
 # chatwork.get_rooms_messages(room_id)
@@ -101,12 +105,12 @@ chatwork = Chatwork('Your Chatwork API Token')
 [{'message_id': '11963102598912', 'account': {'account_id': xxxxx, 'name': 'Aichara', 'avatar_image_url': 'https://appdata.chatwork.com/avatar/xxx.rsz.jpg'}, 
 'body': '[info][title][dtext:chatroom_groupchat_created][/title][dtext:chatroom_chatname_is]test[dtext:chatroom_set]\n\n[dtext:chatroom_member_is][piconname:367][dtext:chatroom_added][/info]', 'send_time': 1561697609, 'update_time': 0}]
 
-
 >>> chatwork.get_rooms_message_information(room_id, message_id) # get specific message information from a chat room
 
 ```
 
 - Room Tasks
+
 ```python
 
 # chatwork.add_rooms_task(self, room_id, task_name, time_limit, account_ids)
@@ -142,6 +146,7 @@ chatwork = Chatwork('Your Chatwork API Token')
 
 ```
 ### Handling incoming requests
+
 ```python
 
 >>> chatwork.get_incoming_requests() # get incoming requests to join chat rooms
