@@ -13,20 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Dayal Chand Aichara
-email: dc.aichara@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-               A postgraduate from IIT Bombay, trying to excel in data science and machine learning field. Also, a blockchain enthusiast, traveler, and trekker.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://dc-aichara.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: dc_aichara
-github_username:  dc-aichara
-linkedin_username: dcaichara
-instagram_username: dcaichara
 
-# Build settings
-markdown: kramdown
-mathjax: true
 theme: jekyll-theme-midnight
 permalink: /:title # removes date from URL
 plugins:
