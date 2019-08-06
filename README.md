@@ -159,7 +159,33 @@ chatwork = Chatwork('Your Chatwork API Token')
 
 
 ```
+
 ***
+## How to reply or send message to specific person or all group member? 
+
+```python
+# Reply to specific person in group 
+# chatwork.send_message(room_id, "[Reply aid=person's id] person'name \n" + "message")
+>>> chatwork.send_message(1598363, "[Reply aid=4018276] Dayal \n" + "Sure. Let's do this. ")
+<Response [200]>
+
+# Send message to specific person 
+# chatwork.send_message(room_id, '[to:person's id] person's name \n' + 'message')
+>>> chatwork.send_message(1598363, '[To:4018276] Dayal \n' + "Hey! What's up ?" )
+<Response [200]>
+
+# Send message to all members of a chat
+# chatwork.send_message(room_id, "[toall]\n" + "message")
+
+>>> chatwork.send_message(1598363, "[toall]\n" + "Meeting starts at 11:00 hours.")
+<Response [200]>
+
+# Note: If you don't know recipients id, then you can just use [To] name and [Reply aid=0] name .
+
+```
+
+***
+
 ## *Responses*
 
 > <Response [200]> Successful
