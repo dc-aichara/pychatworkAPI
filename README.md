@@ -180,7 +180,7 @@ chatwork = Chatwork('Your Chatwork API Token')
 >>> chatwork.send_message(1598363, "[toall]\n" + "Meeting starts at 11:00 hours.")
 <Response [200]>
 
-# Note: If you don't know recipients id, then you can just use [To] name and [Reply aid=0] name .
+# Note: If you don't know recipient's id, then you can just use [To] name and [Reply aid=0] name .
 
 ```
 
