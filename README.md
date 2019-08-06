@@ -161,7 +161,7 @@ chatwork = Chatwork('Your Chatwork API Token')
 ```
 
 ***
-## How to reply or send message to specific person or all group member? 
+## How to reply or send message to specific person or all group members? 
 
 ```python
 # Reply to specific person in group 
