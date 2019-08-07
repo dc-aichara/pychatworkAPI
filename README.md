@@ -184,6 +184,8 @@ chatwork = Chatwork('Your Chatwork API Token')
 
 ```
 
+<img src='images/pychatworkapi.png' >
+
 ***
 
 ## *Responses*
