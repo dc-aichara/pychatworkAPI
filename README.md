@@ -188,6 +188,32 @@ chatwork = Chatwork('Your Chatwork API Token')
 
 ***
 
+## Message Decoration in Chatwork
+
+```python
+# Heading  ---> [title] message [/title]
+
+# Horizontal line ---> [hr]
+
+>>> chatwork.send_message(15983632, "[title] pychatworkAPI [/title][hr]")
+<Response [200]>
+
+# Code Style  ---> [code] message [/code]
+
+>>> chatwork.send_message(15983632, "[code] from pychatworkAPI import Chatwork [/code]")
+<Response [200]>
+
+# Box style ---> [info] message [/info]
+
+>>> chatwork.send_message(15983632, "[info] Check out documentation here: https://pypi.org/project/pychatworkAPI/ [/info]")
+<Response [200]>
+
+```
+<img src="images/chatwork2.png">
+
+***
+
+
 ## *Responses*
 
 > <Response [200]> Successful
