@@ -6,13 +6,13 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setuptools.setup(
   name='pychatworkAPI',
   packages=['pychatworkAPI'],
-  version='1.12',
+  version='1.13',
   license='MIT',
   description='pychatworkAPI is a python package to access chatwork offline.',
   author='Dayal Chand Aichara',
   author_email='dc.aichara@gmail.com',
   url='https://github.com/dc-aichara/pyChatwork',
-  download_url='https://github.com/dc-aichara/pychatworkAPI/archive/V-1.12.tar.gz',
+  download_url='https://github.com/dc-aichara/pychatworkAPI/archive/V-1.13.tar.gz',
   keywords=['chatwork', 'chatwork-api'],
   install_requires=['requests',],
   classifiers=[
