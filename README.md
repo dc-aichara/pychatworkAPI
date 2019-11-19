@@ -1,4 +1,7 @@
 # Chatwork API V2 Wrapper
+
+![](https://img.shields.io/badge/pychatworkAPI-1.13-blue)
+
 ***
 pychatworkAPI is a python package to access chatwork offline.  It is based on [Chatwork API V2](http://download.chatwork.com/ChatWork_API_Documentation.pdf). 
 
