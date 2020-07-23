@@ -1,0 +1,4 @@
+dist/
+pychatworkAPI.egg-info/
+.DS_STORE
+__pycache__/

@@ -1,6 +1,6 @@
 # Chatwork API V2 Wrapper
 
-[![](https://img.shields.io/badge/pychatworkAPI-1.13-blue)](https://github.com/dc-aichara/pychatworkAPI)
+[![](https://img.shields.io/badge/pychatworkAPI-1.2.0-blue)](https://github.com/dc-aichara/pychatworkAPI)
 
 ***
 pychatworkAPI is a python package to access chatwork offline.  It is based on [Chatwork API V2](http://download.chatwork.com/ChatWork_API_Documentation.pdf). 
@@ -50,7 +50,21 @@ chatwork = Chatwork('Your Chatwork API Token')
 
 
 >>> chatwork.get_rooms() # get chat rooms list
-(b'[{"room_id":156655687,"name":"\\u30de\\u30a4\\u30c1\\u30e3\\u30c3\\u30c8","type":"my","role":"member","sticky":true,"unread_num":0,"mention_num":0,"mytask_num":0,"message_num":4,"file_num":0,"task_num":0,"icon_path":"https://appdata.chatwork.com/avatar/ico_default_violet.png","last_update_time":1563412308}]', [{'room_id': 156655687, 'name': 'マイチャット', 'type': 'my', 'role': 'member', 'sticky': True, 'unread_num': 0, 'mention_num': 0, 'mytask_num': 0, 'message_num': 4, 'file_nu 'task_num': 0, 'icon_path': 'https://appdata.chatwork.com/avatar/ico_default_violet.png', 'last_update_time': 1563412308}])
+[{'room_id': 158013311,
+  'name': 'pychatworkAPI',
+  'type': 'group',
+  'role': 'admin',
+  'sticky': False,
+  'unread_num': 0,
+  'mention_num': 0,
+  'mytask_num': 0,
+  'message_num': 9,
+  'file_num': 0,
+  'task_num': 0,
+  'icon_path': 'https://appdata.chatwork.com/icon/ico_heart.png',
+  'last_update_time': 1565660673}
+
+]
 
 
 # chatwork.send_message(self, room_id, message)
@@ -72,13 +86,33 @@ chatwork = Chatwork('Your Chatwork API Token')
 
 # chatwork.get_rooms_by_id(self, room_id) 
 >>> chatwork.get_rooms_by_id(158013300) # get room details by room id
-{'room_id': 158013300, 'name': 'pychatworkAPI', 'type': 'group', 'role': 'admin', 'sticky': False, 'unread_num': 0, 'mention_num': 0, 'mytask_num': 2, 'message_num': 5, 'file_num': 0, 'task_num': 2, 'icon_path': 'https://appdata.chatwork.com/icon/ico_idea.png', 'description': 'A chat room to test pychatworkworkAPI', 'last_update_time': 1563419004}
+{'room_id': 158013311,
+ 'name': 'pychatworkAPI',
+ 'type': 'group',
+ 'role': 'admin',
+ 'sticky': False,
+ 'unread_num': 0,
+ 'mention_num': 0,
+ 'mytask_num': 0,
+ 'message_num': 11,
+ 'file_num': 2,
+ 'task_num': 0,
+ 'icon_path': 'https://appdata.chatwork.com/icon/ico_heart.png',
+ 'description': 'A chat room to test pychatworkworkAPI',
+ 'last_update_time': 1595486713}
+
 
 # chatwork.get_rooms_members(self, room_id)
 >>> chatwork.get_rooms_members(15xxxx38)  # get room members information
-[{'account_id': xxxxxx, 'role': 'admin', 'name': 'Aichara', 'chatwork_id': '', 
-'organization_id': xxxxx, 'organization_name': 'ABC Inc.', 'department': 'Data Analytics', 
-'avatar_image_url': 'https://appdatwork.com/avatar//xxxxxx.rsz.jpg'}]
+[{'account_id': 40182676,
+  'role': 'admin',
+  'name': 'D C',
+  'chatwork_id': '',
+  'organization_id': 238904,
+  'organization_name': '',
+  'department': '',
+  'avatar_image_url': 'https://appdata.chatwork.com/avatar/ico_default_violet.png'}]
+
 
 # chatwork.create_new_room(self,description, members_member_ids, icon_preset, members_readonly_ids, members_admin_ids, name)
 >>> chatwork.create_new_room('Test', [12, 187, 78],'group',[12, 78],[187] , 'test1') # create a new chat room
@@ -155,10 +189,10 @@ chatwork = Chatwork('Your Chatwork API Token')
 >>> chatwork.get_incoming_requests() # get incoming requests to join chat rooms
 
 
->>> chatwork.approve_incoming_requests(self, request_id) # approve incoming request by request id
+>>> chatwork.approve_incoming_requests(request_id) # approve incoming request by request id
  
 
->>> chatwork.delete_incoming_requests(self, request_id) # delete incoming request by request it
+>>> chatwork.delete_incoming_requests(request_id) # delete incoming request by request it
 
 
 ```
