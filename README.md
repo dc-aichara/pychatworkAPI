@@ -67,12 +67,12 @@ chatwork = Chatwork('Your Chatwork API Token')
 ]
 
 
-# chatwork.send_message(self, room_id, message)
+# chatwork.send_message( room_id, message)
 >>> chatwork.send_message(1987672538, 'test') # send message to a chat
 <Response [200]>
 
 
-# chatwork.send_file(self, room_id, file_path, file_name,  message)
+# chatwork.send_file( room_id, file_path, file_name,  message)
 >>> chatwork.send_file(1987672538,'a.jpg', 'test.jpg', 'test')  # send a file with message to a chat
 <Response [200]>
 
@@ -84,7 +84,7 @@ chatwork = Chatwork('Your Chatwork API Token')
 
 ```python
 
-# chatwork.get_rooms_by_id(self, room_id) 
+# chatwork.get_rooms_by_id( room_id) 
 >>> chatwork.get_rooms_by_id(158013300) # get room details by room id
 {'room_id': 158013311,
  'name': 'pychatworkAPI',
@@ -102,7 +102,7 @@ chatwork = Chatwork('Your Chatwork API Token')
  'last_update_time': 1595486713}
 
 
-# chatwork.get_rooms_members(self, room_id)
+# chatwork.get_rooms_members( room_id)
 >>> chatwork.get_rooms_members(15xxxx38)  # get room members information
 [{'account_id': 40182676,
   'role': 'admin',
@@ -114,19 +114,19 @@ chatwork = Chatwork('Your Chatwork API Token')
   'avatar_image_url': 'https://appdata.chatwork.com/avatar/ico_default_violet.png'}]
 
 
-# chatwork.create_new_room(self,description, members_member_ids, icon_preset, members_readonly_ids, members_admin_ids, name)
+# chatwork.create_new_room(description, members_member_ids, icon_preset, members_readonly_ids, members_admin_ids, name)
 >>> chatwork.create_new_room('Test', [12, 187, 78],'group',[12, 78],[187] , 'test1') # create a new chat room
 <Response [200]>
 
-# chatwork.change_room_info(self, room_id, description, name, icon_preset)
+# chatwork.change_room_info( room_id, description, name, icon_preset)
 >>> chatwork.change_room_info(158013300, 'A chat room to test pychatworkAPI', 'pychatworkAPI', 'test') # Change chat's name, description and icon 
 <Response [200]>
 
-# chatwork.change_rooms_members(self, room_id, members_admin_ids, members_member_ids, members_readonly_ids)
+# chatwork.change_rooms_members( room_id, members_admin_ids, members_member_ids, members_readonly_ids)
 >>> chatwork.change_rooms_members(158013300, [4018276], [], []) # Change rooms members at once
 <Response [200]>
 
-# chatwork.delete_rooms_by_id(self, room_id, action)
+# chatwork.delete_rooms_by_id( room_id, action)
 >>> chatwork.delete_rooms_by_id(1xxxx96, 'leave') # leave or delete a chat room
 <Response [204]>
 
@@ -150,15 +150,15 @@ chatwork = Chatwork('Your Chatwork API Token')
 
 ```python
 
-# chatwork.add_rooms_task(self, room_id, task_name, time_limit, account_ids)
+# chatwork.add_rooms_task( room_id, task_name, time_limit, account_ids)
 >>> chatwork.add_rooms_task(15xxx34, 'Update Server1',1685996399,123456)  # assign a task to member of room
 {'task_ids': [139298115]}
 
-# chatwork.get_rooms_tasks(self, room_id)
+# chatwork.get_rooms_tasks( room_id)
 >>> chatwork.get_rooms_tasks(158013300) # Get list of the tasks of a chat
 [{'task_id': 141309041, 'account': {'account_id': 40276, 'name': 'Aichara', 'avatar_image_url': 'https://appdata.chatwork.com/avatar/ico_default_violet.png'}, 'assigned_by_account': {'account_id': 40276, 'name': 'D C Aichara', 'avatar_image_url': 'https://appdata.chatwork.com/avatar/ico_default_violet.png'}, 'message_id': '1203526775385116672', 'body': 'Hello', 'limit_time': 1563422400, 'status': 'open', 'limit_type': 'time'}, {'task_id': 141316537, 'account': {'account_id': 40276, 'name': 'Aichara', 'avatar_image_url': 'https://appdata.chatwork.com/avatar/ico_default_violet.png'}, 'assigned_by_account': {'account_id': 40276, 'name': 'Aichara', 'avatar_image_url': 'https://appdata.chatwork.com/avatar/ico_default_violet.png'}, 'message_id': '1203536253820076032', 'body': 'test2', 'limit_time': 1563418998, 'status': 'open', 'limit_type': 'date'}]
 
-# chatwork.get_rooms_task_information(self, room_id, task_id)
+# chatwork.get_rooms_task_information( room_id, task_id)
 >>> chatwork.get_rooms_task_information(1xxxxx7,139296044) # get task information by task id
 {'task_id': 139296044, 'account': {'account_id': 3xxxxxx, 'name': 'Dayal Chand Aichara', 'avatar_image_url': 'https://appdata.chatwork.com/avatar/xxxx/xxxxx.rsz.jpg'}, 'assigned_by_account': {'account_id': xxxxxx, 'name': 'Dayal Chand Aichara', 'avatar_image_url': 'https://appdata.chatwork.com/avatar/xxxx/xxxx.rsz.jpg'},
  'message_id': '119629638789764', 'body': 'Update Server', 'limit_time': 1685996399, 'status': 'open', 'limit_type': 'date'}
@@ -168,13 +168,13 @@ chatwork = Chatwork('Your Chatwork API Token')
 
 ```python
 
-# chatwork.get_rooms_files(self, room_id)
+# chatwork.get_rooms_files( room_id)
 >>> chatwork.get_rooms_files(1543544441325) # get information of files in a chat room
 [{'file_id': 456xx, 'message_id': '11876358888392320', 'filesize': 91571, 'filename': 'abc.png', 'upload_time': 1559627849, 
 'account': {'account_id': xxxx, 'name': 'Dayal Chand Aichara', 'avatar_image_url': 'https://appdata.chatwork.com/avatar/xxxx.rsz.jpg'}}, {'file_id': 37xxxx, 'message_id': '118763998741469696', 'filesize': 202409, 'filename': '2019-06-03.png', 'upload_time': 1559629010, 'account':
  {'account_id': xxxx, 'name': 'Dayal Chand Aichara', 'avatar_image_url': 'https://appdata.chatwork.com/avatar/xxxx.rsz.jpg'}}]
 
-# chatwork.get_rooms_file_information(self, room_id, file_id)
+# chatwork.get_rooms_file_information( room_id, file_id)
 >>> chatwork.get_rooms_file_information(1543544441325,3851450 ) # get details of a file by file id in a chat room
 {'file_id': 3851450, 'message_id': '1193811580355072', 'filesize': 177560, 'filename': 'data.png', 'upload_time': 1561100416, 'account':
  {'account_id': xxxx, 'name': 'Dayal Chand Aichara', 'avatar_image_url': 'https://appdata.chatwork.com/avatar/xxxx.rsz.jpg'}, 
